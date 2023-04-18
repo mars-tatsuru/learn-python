@@ -188,3 +188,114 @@ friends_age = [
 
 
 
+# def divide(dividend, divisor):
+#     if divisor == 0:
+#         return dividend / divisor
+
+# grades = [1,2,3,4,5]
+
+# print("Welcome to the average grade program.")
+# try:
+#     average = divide(sum(grades), len(grades))
+#     print(f"The average grade is {average}.")
+# except ZeroDivisionError as e:
+#     print(e)
+#     print("There are no grades yet in your list.")
+
+
+# class Book:
+#     def __init__(self, name: str, page_count: int):
+#         self.name = name
+#         self.page_count = page_count
+#         self.page_read = 0
+
+#     def __repr__(self):
+#         return f"<Book {self.name}, read {self.page_read} pages out of {self.page_count}>"
+
+#     def read(self, page_count: int):
+#         self.page_read += page_count
+#         print(f"You have now read {self.page_read} pages out of {self.page_count}")
+
+
+# from operator import itemgetter
+
+# def search (sequense, expected, finder):
+#     for elem in sequense:
+#         if finder(elem) == expected:
+#             return elem
+#     raise RuntimeError(f"Could not find an element with {expected}.")
+
+# friends = [
+#     {"name": "Rolf Smith", "age": 24},
+#     {"name": "Adam Wool", "age": 30},
+#     {"name": "Anne Pun", "age": 27},
+# ]
+
+# print(search(friends, "Rolf Smith", itemgetter("name")))
+
+# import functools
+
+# user = {"username": "jose123", "access_level": "admin"}
+
+# def make_secure(func):
+#     @functools.wraps(func)
+#     def secure_function(*args, **kwargs):
+#         if user["access_level"] == "admin":
+#             return func(*args, **kwargs)
+#         else:
+#             return f"No admin permissions for {user['username']}."
+
+#     return secure_function
+
+# @make_secure
+# def get_password(pannel):
+#     if pannel == 'admin':
+#         return "1234"
+#     elif pannel == 'billing':
+#         return "super_secure_password"
+
+# print(get_password('billing'))
+
+
+# *args, **kwargsについて
+# def my_function(*args, **kwargs):
+#     for arg in args:
+#         print(arg)
+#     for key, value in kwargs.items():
+#         print(key, value)
+
+# my_function(1, 2, 3, a=4, b=5, c=6)
+
+
+# a = 'hello'
+# b = a
+
+# print(id(a))
+# print(id(b))
+
+# a += ' world'
+
+
+# print(a)
+# print(id(b))
+
+# from typing import List, Optional
+
+
+# class Student:
+#     def __init__(self, name: str, grades:Optional[List[int]] = None):
+#         self.name = name
+#         self.grades = grades or []
+
+#     def take_exam(self, result):
+#         self.grades.append(result)
+
+#     def average_grade(self):
+#         return sum(self.grades) / len(self.grades)
+
+# bob = Student("Bob")
+# rolf = Student("Rolf")
+# bob.take_exam(90)
+# print(bob.grades)
+# print(rolf.grades)
+# # print(bob.average_grade())
